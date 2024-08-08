@@ -1,13 +1,11 @@
+import { useState } from 'react';
 import './App.css';
+import Router from './router/Router';
 
 const App = () => {
-  return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
-  );
+  const [allRoutes, setAllRoutes] = useState([]);
+
+  return <Router allRoutes={allRoutes} />;
 }
 
 export default App;
