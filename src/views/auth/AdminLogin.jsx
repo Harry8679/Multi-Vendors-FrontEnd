@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import { FaGoogle } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 
 const AdminLogin = () => {
   const [state, setState] = useState({
@@ -25,8 +22,8 @@ const AdminLogin = () => {
     <div className='min-w-screen min-h-screen bg-[#cdcae9] flex justify-center items-center'>
       <div className='w-[350px] text-[#fff] p-2'>
         <div className='bg-[#6f68d1] p-4 rounded-md'>
-            <div>
-                <div>
+            <div className='h-[70px] flex justify-center items-center'>
+                <div className='w-[180px] h-[50px]'>
                     <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
                 </div>
             </div>
@@ -43,7 +40,7 @@ const AdminLogin = () => {
                         placeholder='Enter your password' id='password' required value={state.password} onChange={inputHandle} />
                 </div>
 
-                <button className='bg-slate-800 w-full hover:shadow-blue-300 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>Sign In</button>
+                <button className='bg-slate-800 w-full hover:shadow-blue-300 hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>Login</button>
             </form>
         </div>
       </div>
