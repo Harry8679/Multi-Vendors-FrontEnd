@@ -3,9 +3,10 @@ import api from "../../api/api";
 
 export const admin_login = createAsyncThunk(
     'admin/admin_login', async(info) => {
-        console.log(info);
+        console.log('info', info);
         try {
-            const { data } = await api.post('/admin-login', info, { withCredentials: true });
+            const { data } = await api.post('/users/admin-login', info, { withCredentials: true });
+            console.log('data', data);
         } catch (e) {}
     }
 );
